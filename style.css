@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clock_container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: url(clock.png) no-repeat;
+  border: 2px solid #3aafb8;
+  border-radius: 50%;
+  box-shadow: 0px 4px 16px #252525;
+  margin: 8% auto;
+}
+.clock_container::after {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: #252525;
+  border-radius: 50%;
+}
+#hour {
+  position: absolute;
+  top: 22%;
+  left: 49.6%;
+  background: #5d5d5d;
+  width: 1.5%;
+  height: 29%;
+  transform-origin: bottom;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+}
+#min {
+  position: absolute;
+  top: 19%;
+  left: 49.6%;
+  background: #1e9aa3;
+  width: 1.2%;
+  height: 32%;
+  border-radius: 30%;
+  transform-origin: bottom;
+}
+#sec {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  background: #b91b1b;
+  width: 0.9%;
+  height: 51%;
+  border-radius: 27%;
+  transform-origin: 63% 74%;
+}
+#sec::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 35px;
+  background: #b91b1b;
+  bottom: 0;
+  left: 1000;
+  right: -5px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
